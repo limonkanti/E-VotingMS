@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+          
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="/templates/page-template.xhtml">
+        <ui:define name="title">
+            RESULT OF VOTE
+        </ui:define>
+        <ui:define name="top">
+            <div id="blank"></div>
+        </ui:define>
+        
+        
+           <ui:define name="left">
+               <h:link value="ADD MARK" outcome="addmark.xhtml"></h:link>
+           <br></br><br></br>
+           <br></br><br></br>
+           
+           
+               <h:link value="ADD CANDIDATE" outcome="addcandidate.xhtml"></h:link>
+               <br></br><br></br>
+               <br></br><br></br>
+               
+               <h:link value="ADD VOTER" outcome="addVoter.xhtml"></h:link>
+               <br></br><br></br>
+               <br></br><br></br>
+               
+               <h:link value="VIEW CANDIDATE" outcome="displayCandidate.xhtml"></h:link>
+               <br></br><br></br>
+               <br></br><br></br>
+               
+               <h:link value="VIEW RESULT" outcome="displayResult.xhtml"></h:link>
+               <br></br><br></br>
+               <br></br><br></br>
+               
+               <h:link value="VIEW VOTER" outcome="displayVoter.xhtml"></h:link>
+               <br></br><br></br>
+               <br></br><br></br>
+           
+        </ui:define>
+            <ui:define name="content">
+                <h1 align="center">WELCOME TO ELECTION COMMISSION PROFILE.</h1>
+                <p align="left">Welcome to you online e-voting system. This project is made by me.This project is secured. Election commission
+                control this project easily and automatically.He/She add the voter to the system. Voter can give vote by using id.A voter can give only one vote.If a voter try to give more than one vote the system will display error message.
+                After completing vote election commission can declare the result automatically.
+                In this project i have used JSF as framework. I have also used Hibernate to integrate with JSF. As back end
+                i have used MySQL.This is my first project in JSF and Integrate with Hibernate.</p><br></br><br></br><br></br>
+                <h3 align="left" style="color:blue;">RESULT OF THE CANDIDATE.</h3>
+                
+              <h:dataTable value="#{voting_ResultMB.votingResult}" var="u" border="1">
+            <h:column>
+                <f:facet name="header">Book</f:facet>
+                #{u.mark1}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Pen</f:facet>
+                #{u.mark2}
+            </h:column>
+            
+        <h:column>
+                <f:facet name="header">Mango</f:facet>
+                #{u.mark3}
+            </h:column>
+        </h:dataTable>
+                 
+           
+        </ui:define>
+  
+        
+    </ui:composition>
+</html>

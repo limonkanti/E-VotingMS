@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <ui:composition template="/templates/page-template.xhtml">
+        <ui:define name="title">
+            VOTING
+        </ui:define>
+        <ui:define name="top">
+            <div id="blank"></div>
+        </ui:define>
+        
+        
+           <ui:define name="left">
+               <h:link value="HOME" outcome="index.xhtml"></h:link>
+           <br></br><br></br>
+           <br></br><br></br>
+           
+           
+               <h:link value="VOTING" outcome="voting.xhtml"></h:link>
+               <br></br><br></br>
+               <br></br><br></br>
+               
+               <h:link value="CONTACT" outcome="contact.xhtml"></h:link>
+               <br></br><br></br>
+               <br></br><br></br>
+           
+        </ui:define>
+            <ui:define name="content">
+                <h1 align="center">WELCOME TO YOU E-VOTING SYSTEM PROJECT</h1>
+                <p align="left">Welcome to you online e-voting system. This project is made by me.This project is secured. Election commission
+                control this project easily and automatically.He/She add the voter to the system. Voter can give vote by using id.A voter can give only one vote.If a voter try to give more than one vote the system will display error message.
+                After completing vote election commission can declare the result automatically.
+                In this project i have used JSF as framework. I have also used Hibernate to integrate with JSF. As back end
+                i have used MySQL.This is my first project in JSF and Integrate with Hibernate.</p><br></br><br></br><br></br>
+                <h3 align="left" style="color:blue;">Welcome to Voter Login Form.</h3>
+                
+                    <h:form>
+                    
+                   <p:messages id="msg" closable="true" showDetail="true"></p:messages>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel>Enter Voter Name : </h:outputLabel> 
+                        <h:inputText value="#{voter_LoginMB.votername}"
+                            p:placeholder="Enter Voter Name" 
+                            required="true"
+                            requiredMessage="Please Enter Correct Voter Name."       
+                                     
+                                     
+                                     />
+                        <h:outputLabel>Enter Voter ID : </h:outputLabel> 
+                        <h:inputText value="#{voter_LoginMB.voterid}"
+                                     
+                            p:placeholder="Enter Correct ID" 
+                            required="true"
+                            requiredMessage="Please Enter CorrectID."                
+                                     
+                                     
+                                     />
+                        <p:commandButton value="Login" action="#{voter_LoginMB.loginVoter()}" update="msg"/>
+                        <h:commandButton value="Reset" type="reset"/>
+                    </h:panelGrid>
+                </h:form>
+                    
+                
+           
+        </ui:define>
+            
+       
+       
+        
+        
+    </ui:composition>
+</html>
+

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <ui:composition template="/templates/page-template.xhtml">
+        <ui:define name="title">
+           VOTER-PROFILE
+        </ui:define>
+        <ui:define name="top">
+            <div id="blank"></div>
+        </ui:define>
+        
+        
+           <ui:define name="left">
+               <h:link value="DISPLAY CANDIDATE" outcome="displayCandidate.xhtml"></h:link>
+           <br></br><br></br>
+           <br></br><br></br>
+           
+           
+               <h:link value="GIVE VOTE" outcome="addvoting.xhtml"></h:link>
+               <br></br><br></br>
+               <br></br><br></br>
+               
+              
+           
+        </ui:define>
+            <ui:define name="content">
+                <h1 align="center">WELCOME TO VOTER PROFILE.</h1>
+                <p align="left">Welcome to you online e-voting system. This project is made by me.This project is secured. Election commission
+                control this project easily and automatically.He/She add the voter to the system. Voter can give vote by using id.A voter can give only one vote.If a voter try to give more than one vote the system will display error message.
+                After completing vote election commission can declare the result automatically.
+                In this project i have used JSF as framework. I have also used Hibernate to integrate with JSF. As back end
+                i have used MySQL.This is my first project in JSF and Integrate with Hibernate.</p><br></br><br></br><br></br>
+                
+                
+            
+                    
+                
+           
+        </ui:define>
+            
+       
+       
+        
+        
+    </ui:composition>
+</html>
+

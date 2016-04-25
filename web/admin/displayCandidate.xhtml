@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:p="http://primefaces.org/ui"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Display Candidate</title>
+    </h:head>
+    <h:body>
+        
+        <p:dataGrid var="p" value="#{view_CandidateMB.candidateInfo}" columns="3" rows="10">
+            
+            <p:panel header="Candidate Name : #{p.candidate_name}">
+                    <h:panelGrid columns="1">
+                        <h:graphicImage name="#{p.candidate_image}" library="images" width="130" height="150"></h:graphicImage>
+                       
+                    </h:panelGrid>
+                 
+
+                </p:panel>
+            
+            <p:panel header="Candidate Mark : #{p.mark_name}">
+
+                </p:panel>
+        </p:dataGrid>
+    </h:body>
+</html>
+

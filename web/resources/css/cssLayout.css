@@ -1,0 +1,77 @@
+
+#top {
+    position: relative;
+    background-color: #036fab;
+    color: white;
+    padding: 2px;
+    margin: 0px 0px 1px 0px;
+    background-image: url(../images/e-voting.jpg);
+    background-repeat: repeat;
+     
+}
+
+#bottom {
+    position: relative;
+    background-color: #c2dfef;
+    padding: 2px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    height: 40px;
+}
+
+#left {
+    float: left;
+    background-color: #ece3a5;
+    text-align: center;
+    width: 200px;
+    height: 400px;
+    
+    padding: 2px;
+    margin: 0px 0px 1px 0px;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    padding: 5px;
+}
+
+.left_content {
+    background-color: #dddddd;
+    height: 400px;
+    width: 1342px;
+    text-align: center;
+    padding: 2px;
+    margin: 0px 0px 0px 0px;
+    
+    
+   
+}
+
+
+.right_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+#top a:link, #top a:visited {
+  color: white;
+  font-weight : bold;
+  text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover  {
+  color: black;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+

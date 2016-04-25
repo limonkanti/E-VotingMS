@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 11, 2016 12:24:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Mark" table="mark" catalog="evoting_ms" optimistic-lock="version">
+        <id name="markId" type="java.lang.Integer">
+            <column name="mark_id" />
+            <generator class="identity" />
+        </id>
+        <property name="markName" type="string">
+            <column name="mark_name" length="45" not-null="true" />
+        </property>
+        <set name="addCandidates" table="add_candidate" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mark_id" not-null="true" />
+            </key>
+            <one-to-many class="entity.AddCandidate" />
+        </set>
+        <set name="votings" table="voting" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mark_id" not-null="true" />
+            </key>
+            <one-to-many class="entity.Voting" />
+        </set>
+    </class>
+</hibernate-mapping>

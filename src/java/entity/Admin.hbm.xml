@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 11, 2016 12:24:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Admin" table="admin" catalog="evoting_ms" optimistic-lock="version">
+        <id name="adminId" type="java.lang.Integer">
+            <column name="admin_id" />
+            <generator class="identity" />
+        </id>
+        <property name="adminName" type="string">
+            <column name="admin_name" length="45" not-null="true" />
+        </property>
+        <property name="adminPassword" type="string">
+            <column name="admin_password" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

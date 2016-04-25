@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Admin Login</title>
+    </h:head>
+    <h:body>
+        <h:form>
+           
+            <p:outputLabel>Enter Admin Name : </p:outputLabel>
+                <p:inputText value="#{add_Admin_LoginMB.name}"></p:inputText>
+                
+                <p:outputLabel>Enter Admin Password : </p:outputLabel>
+                <h:inputSecret value="#{add_Admin_LoginMB.password}"></h:inputSecret>
+                <p:commandButton action="#{add_Admin_LoginMB.loginEC()}" value="Save"></p:commandButton>
+                
+                <p:commandButton type="reset" value="Reset"></p:commandButton>
+        </h:form>
+    </h:body>
+</html>
+

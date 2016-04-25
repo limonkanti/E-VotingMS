@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 11, 2016 12:24:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.AddVoter" table="add_voter" catalog="evoting_ms" optimistic-lock="version">
+        <id name="voterId" type="int">
+            <column name="voter_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="voterName" type="string">
+            <column name="voter_name" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Admin Login</title>
+    </h:head>
+    <h:body>
+        <h:form>
+           
+            <p:panelGrid columns="2">
+                <p:outputLabel>Enter Voter Name : </p:outputLabel>
+                <p:inputText value="#{add_Voter_LoginMB.voter_name}"></p:inputText>
+                
+                <p:outputLabel>Enter Voter ID : </p:outputLabel>
+                <h:inputText value="#{add_Voter_LoginMB.voter_id}"></h:inputText>
+                <p:commandButton action="#{add_Voter_LoginMB.loginVoter()}" value="Save"></p:commandButton>
+            </p:panelGrid>
+            
+        </h:form>
+    </h:body>
+</html>
+
